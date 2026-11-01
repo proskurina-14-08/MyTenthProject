@@ -1,6 +1,6 @@
 #include<iostream>
 
-int create_array(int sizeArray);
+double* create_array(int sizeArray);
 
 int main()
 {
@@ -11,7 +11,7 @@ int main()
 	return 0;
 }
 
-int create_array(int sizeArray)
+double* create_array(int sizeArray)
 {
 	double* array{ new  double[sizeArray] {} };
 	std::cout << "Your array: ";
@@ -21,5 +21,5 @@ int create_array(int sizeArray)
 	}
 	delete[] array;
 	std::cout << std::endl;
-	return sizeArray;
+	return array;
 }
